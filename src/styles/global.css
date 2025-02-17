@@ -4,111 +4,101 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Alexandria';
-    src: url('/fonts/Alexandria-Black.woff2') format('woff2'),
-         url('/fonts/Alexandria-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
+  font-family: "Alexandria";
+  src: url("/fonts/Alexandria-Black.woff2") format("woff2"), url("/fonts/Alexandria-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Alexandria';
-    src: url('/fonts/Alexandria-Bold.woff2') format('woff2'),
-         url('/fonts/Alexandria-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Alexandria";
+  src: url("/fonts/Alexandria-Bold.woff2") format("woff2"), url("/fonts/Alexandria-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Alexandria';
-    src: url('/fonts/Alexandria-ExtraBold.woff2') format('woff2'),
-         url('/fonts/Alexandria-ExtraBold.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
+  font-family: "Alexandria";
+  src: url("/fonts/Alexandria-ExtraBold.woff2") format("woff2"), url("/fonts/Alexandria-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Alexandria';
-    src: url('/fonts/Alexandria-ExtraLight.woff2') format('woff2'),
-         url('/fonts/Alexandria-ExtraLight.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
+  font-family: "Alexandria";
+  src: url("/fonts/Alexandria-ExtraLight.woff2") format("woff2"), url("/fonts/Alexandria-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Alexandria';
-    src: url('/fonts/Alexandria-Light.woff2') format('woff2'),
-         url('/fonts/Alexandria-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+  font-family: "Alexandria";
+  src: url("/fonts/Alexandria-Light.woff2") format("woff2"), url("/fonts/Alexandria-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Alexandria';
-    src: url('/fonts/Alexandria-Medium.woff2') format('woff2'),
-         url('/fonts/Alexandria-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Alexandria";
+  src: url("/fonts/Alexandria-Medium.woff2") format("woff2"), url("/fonts/Alexandria-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Alexandria';
-    src: url('/fonts/Alexandria-Regular.woff2') format('woff2'),
-         url('/fonts/Alexandria-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Alexandria";
+  src: url("/fonts/Alexandria-Regular.woff2") format("woff2"), url("/fonts/Alexandria-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Alexandria';
-    src: url('/fonts/Alexandria-SemiBold.woff2') format('woff2'),
-         url('/fonts/Alexandria-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Alexandria";
+  src: url("/fonts/Alexandria-SemiBold.woff2") format("woff2"), url("/fonts/Alexandria-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Alexandria';
-    src: url('/fonts/Alexandria-Thin.woff2') format('woff2'),
-         url('/fonts/Alexandria-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
+  font-family: "Alexandria";
+  src: url("/fonts/Alexandria-Thin.woff2") format("woff2"), url("/fonts/Alexandria-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Kablammo';
-    src: url('/fonts/Kablammo-Regular.woff2') format('woff2'),
-         url('/fonts/Kablammo-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Kablammo";
+  src: url("/fonts/Kablammo-Regular.woff2") format("woff2"), url("/fonts/Kablammo-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --text: #122117;
-        --background: #ffffff;
-        --primary: #20883f;
-        --secondary: #81da9b;
-        --accent: #2bc559;
-      }
+  :root {
+    --text: #122117;
+    --background: #ffffff;
+    --primary: #20883f;
+    --secondary: #81da9b;
+    --accent: #2bc559;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --text: #deede3;
-        --background: #262626;
-        --primary: #54b170;
-        --secondary: #257e40;
-        --accent: #3ad468;
-      }
+  :root {
+    --text: #deede3;
+    --background: #262626;
+    --primary: #54b170;
+    --secondary: #257e40;
+    --accent: #3ad468;
+  }
 }
 
 @layer base {
-    body {
-        @apply bg-background text-text;
-    }
+  body {
+    @apply bg-background text-text;
+  }
 }
-  
+
 body {
-    font-family: 'Alexandria', sans-serif;
+  font-family: "Alexandria", sans-serif;
 }
