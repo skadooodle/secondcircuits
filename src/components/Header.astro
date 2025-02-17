@@ -5,7 +5,6 @@ import "../styles/hamburgers.css";
 import lightLogo from '../icons/logo-light.svg';
 import darkLogo from '../icons/logo-dark.svg';
 ---
-
 <header>
   <nav
     class="flex container mx-auto md:p-10 px-4 py-6 items-center justify-between"
@@ -29,7 +28,6 @@ import darkLogo from '../icons/logo-dark.svg';
           <span class="hamburger-inner"></span>
         </span>
       </button>
-
       <div id="navigation" class="fixed top-0 left-0 w-full h-full bg-background transform -translate-y-full transition-transform duration-300 ease-in-out">
         <ul class="flex flex-col items-center justify-center h-full gap-8 text-nowrap">
           <li><Link href="#Home" text="Home" style="primary" /></li>
@@ -42,18 +40,34 @@ import darkLogo from '../icons/logo-dark.svg';
   </nav>
 </header>
 <script is:inline>
-  function init(){
+  function toggleMenu(hamburger, menu, show = null) {
+    const isActive = show !== null ? show : !hamburger.classList.contains('is-active');
+    
+    hamburger.classList.toggle('is-active', isActive);
+    menu.classList.toggle('-translate-y-full', !isActive);
+    menu.classList.toggle('translate-y-0', isActive);
+  }
+
+  function init() {
     const hamburger = document.querySelector(".hamburger");
     const menu = document.getElementById("navigation");
-
+    
     if (hamburger && menu) {
+      // Handle hamburger button click
       hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("is-active");
-        menu.classList.toggle("-translate-y-full");
-        menu.classList.toggle("translate-y-0");
+        toggleMenu(hamburger, menu);
+      });
+
+      // Handle menu item clicks
+      const menuItems = menu.querySelectorAll('a');
+      menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+          toggleMenu(hamburger, menu, false);
+        });
       });
     }
   }
+  
   init();
   document.addEventListener("astro:after-swap", init);
 </script>
