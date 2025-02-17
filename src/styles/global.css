@@ -82,7 +82,33 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text: #122117;
+        --background: #ffffff;
+        --primary: #20883f;
+        --secondary: #81da9b;
+        --accent: #2bc559;
+      }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #deede3;
+        --background: #262626;
+        --primary: #54b170;
+        --secondary: #257e40;
+        --accent: #3ad468;
+      }
+}
+
+@layer base {
+    body {
+        @apply bg-background text-text;
+    }
+}
+  
 body {
     font-family: 'Alexandria', sans-serif;
-    background-color: #f2f2f2;
 }
