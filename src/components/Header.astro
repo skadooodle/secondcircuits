@@ -2,7 +2,8 @@
 import Link from "./HeaderLink.astro";
 import { Image } from "astro:assets";
 import "../styles/hamburgers.css";
-const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,gif}");
+import lightLogo from '../icons/logo-light.svg';
+import darkLogo from '../icons/logo-dark.svg';
 ---
 
 <header>
@@ -10,7 +11,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg
     class="flex container mx-auto md:p-10 px-4 py-6 items-center justify-between"
   >
     <a class="flex items-center gap-2" href="/">
-      <Image class="w-12" src={images["/src/assets/logo-dark.png"]()} alt="Sorolla, photo wiki" />
+      <Image class="w-12 hidden dark:block" src={darkLogo} alt="Logo" />
+      <Image class="w-12 block dark:hidden" src={lightLogo} alt="Logo" />
       <p class="pt-2 md:text-3xl font-semibold flex">
         <span class="hidden md:block">Second Circuits</span>
       </p>
